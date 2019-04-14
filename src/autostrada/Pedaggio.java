@@ -12,12 +12,16 @@ public class Pedaggio implements Percorso {
     
     @Override
     public  double getDistanza(Casello c1, Casello c2) {
-		
+	double distanza;
         
-        double distanza = c1.getDistanzaInizio() < c2.getDistanzaInizio() ? 
-                c2.getDistanzaInizio()-c1.getDistanzaInizio() :
-		c1.getDistanzaInizio()-c2.getDistanzaInizio();
-		return distanza;
+        if(c1.getDistanzaInizio() < c2.getDistanzaInizio()){ 
+               distanza = c2.getDistanzaInizio()-c1.getDistanzaInizio();
+	}
+	else{
+		distanza = c1.getDistanzaInizio()-c2.getDistanzaInizio();
+	}
+	    		return distanza;
+
 }
     
     
